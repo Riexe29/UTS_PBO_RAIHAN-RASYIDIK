@@ -25,7 +25,7 @@ class Departemen:
 
     def findPegawai(self, searchId):
         for s in self.__daftarPegawai:
-            if s.getId() == searchId:
+            if s.getId().lower() == searchId:
                 s.showDetails()
                 return
         print("Pegawai tidak ditemukan")
