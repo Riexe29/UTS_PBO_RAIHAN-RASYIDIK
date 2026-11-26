@@ -7,7 +7,7 @@ class Departemen:
 
     def tambahPegawai(self, pegawai):
         for p in self.__daftarPegawai:
-            if p.getId() == pegawai.getId():
+            if p.getId().strip() == pegawai.getId().strip():
                 print("Id pegawai sudah terdaftar")
                 return
             
@@ -16,7 +16,7 @@ class Departemen:
 
     def tampilPegawai(self):
         if not self.__daftarPegawai:
-            print("Pegawai tidak ditemukan")
+            print("Belum ada data ditemukan")
             return
         
         for p in self.__daftarPegawai:
@@ -28,7 +28,7 @@ class Departemen:
             if s.getId() == searchId:
                 s.showDetails()
                 return
-            print("Pegawai tidak ditemukan")
+        print("Pegawai tidak ditemukan")
 
     def delPegawai(self, Hapus):
         for h in self.__daftarPegawai:
